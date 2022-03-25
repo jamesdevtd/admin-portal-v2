@@ -17,6 +17,12 @@ const SignUp = () => {
     setFormStep(++step);
   }
 
+  const handleSuccessAccount = (val: boolean): void => {
+    if(val) {
+      setFormStep(1);
+    }
+  }
+
   // TODO: const params = new URLSearchParams(window.location.search);
   // TODO: const stripecode = params.get('code');  
 
@@ -54,7 +60,7 @@ const SignUp = () => {
                 case 4:
                   return <SetupPayout />
                 default:
-                  return <PreSteps handleSuccessStep={handleSuccessStep}/>
+                  return <PreSteps handleSuccessAccount={handleSuccessAccount}/>
               }
             })()}
           </div>

@@ -13,10 +13,10 @@ interface FormFields {
 }
 
 type PreStepsProps = {
-    handleSuccessStep: (arg: number) => void
+    handleSuccessAccount: (val: boolean) => void
 }
 
-const PreSteps = ({ handleSuccessStep }: PreStepsProps) => {
+const PreSteps = ({ handleSuccessAccount }: PreStepsProps) => {
     const [passwordShown, setPasswordShown] = useState<boolean>(false);
     const [successful, setSuccessful] = useState<boolean>(false);
     const [message, setMessage] = useState<string>("");
@@ -98,7 +98,7 @@ const PreSteps = ({ handleSuccessStep }: PreStepsProps) => {
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
-                    onSubmit={() => handleSuccessStep(0)}
+                    onSubmit={() => handleSuccessAccount(true)}
                 >
                     <Form className="flex flex-col gap-5">
                         <div className="form-group">

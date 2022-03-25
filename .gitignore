@@ -2,3 +2,5 @@ node_modules/
 /dist
 /build
 !/shared/libs/**/*.jar
+src/forms/affiliate/.DS_Store
+.DS_Store
