@@ -27,7 +27,7 @@ const LeagueName = ({ handleSuccessStep, currentStep }: PreStepsProps) => {
             .required("This field is required!"),
     });
 
-       const handleSubmit = () => {
+    const handleSubmit = () => {
         setSuccessful(false);
         setMessage('');
         setLoading(false);

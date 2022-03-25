@@ -113,3 +113,12 @@ ul.warnings li {
 .uploader-placeholder input {
   opacity: 0;
 }
+
+.location-selector > div {
+  border-radius: 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-color: #6b7280;
+  border-width: 1px;
+  min-height:38px;
+}

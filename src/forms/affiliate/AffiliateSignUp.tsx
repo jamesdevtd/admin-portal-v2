@@ -11,7 +11,7 @@ import StepsButtons from "./signup-steps/StepsButtons";
 
 
 const SignUp = () => {
-  const [formStep, setFormStep] = useState<number>(0);
+  const [formStep, setFormStep] = useState<number>(1);
 
   const handleSuccessStep = (step: number): void => {
     setFormStep(++step);
