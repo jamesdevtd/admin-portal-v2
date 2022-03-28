@@ -100,7 +100,7 @@ const LeagueAddresses = ({ handleSuccessStep }: PreStepsProps) => {
                         />
                     </div>
                     <div className="form-group">
-                        <Field name="playingFacilityLocationText" type="text" className="form-control hidden" placeholder="1800 Mamaroneck Ave, White Plains, NY,USA" />
+                        <Field name="playingFacilityLocationText" type="text" className="form-control hidden test" placeholder="1800 Mamaroneck Ave, White Plains, NY,USA" />
                         <GooglePlacesAutocomplete apiKey={tempAPIKey}
                             selectProps={{
                                 location1,
