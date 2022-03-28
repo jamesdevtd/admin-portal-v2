@@ -48,7 +48,7 @@ const LeagueName = ({ handleSuccessStep, currentStep }: PreStepsProps) => {
                             <ul className="warnings">
                                 <li>NO PROFANITY</li>
                                 <li>NO SPECIAL CHARACTERS</li>
-                                <li>35 Character Max</li>
+                                <li>35 CHARACTER MAX</li>
                             </ul>
                         </div>
                     </div>
