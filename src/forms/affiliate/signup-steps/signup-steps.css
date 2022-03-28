@@ -122,3 +122,21 @@ ul.warnings li {
   border-width: 1px;
   min-height:38px;
 }
+
+.LeagueName .form-group > label {
+  @apply text-blue-brand;
+}
+
+.in-steps .form-wrap {
+  margin-top: 60px;
+}
+
+
+@media (max-width: 700px) {
+  .col-branding {
+    height: 172px !important;
+  }
+  .in-steps .form-wrap {
+    margin-top: 0;
+  }
+}

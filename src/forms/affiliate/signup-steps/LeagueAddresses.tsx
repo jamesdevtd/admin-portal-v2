@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { Formik, Field, Form, ErrorMessage, useFormik } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+// TOD: import { useFormik } from "formik";
 import * as Yup from "yup";
-import GooglePlacesAutocomplete, { geocodeByPlaceId } from 'react-google-places-autocomplete';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+// TODO: import { geocodeByPlaceId } from 'react-google-places-autocomplete';
 
 interface AddressesFields {
     mailingAddressObject?: Object,
@@ -69,7 +71,7 @@ const LeagueAddresses = ({ handleSuccessStep }: PreStepsProps) => {
                         </div>
                     </div>
                     <div className="form-group">
-                        <Field name="mailingAddressText" type="text" className="form-control" placeholder="44 Mamaroneck Ave. White Plains, NY, USA" />
+                        <Field name="mailingAddressText" type="text" className="form-control hidden" placeholder="44 Mamaroneck Ave. White Plains, NY, USA" />
                         <GooglePlacesAutocomplete apiKey={tempAPIKey}
                             selectProps={{
                                 location1,
@@ -80,6 +82,7 @@ const LeagueAddresses = ({ handleSuccessStep }: PreStepsProps) => {
 
                             }}
                         />
+                        <label htmlFor="mailingAddressText">Affiliate Mailing Address<span></span></label>
                         <ErrorMessage
                             name="mailingAddressText"
                             component="div"
@@ -89,6 +92,7 @@ const LeagueAddresses = ({ handleSuccessStep }: PreStepsProps) => {
                     </div>
                     <div className="form-group">
                         <Field name="playingFacilityName" type="text" className="form-control" placeholder="Saxon Woods Park" />
+                        <label htmlFor="playingFacilityName">Name of Playing Facility<span></span></label>
                         <ErrorMessage
                             name="playingFacilityName"
                             component="div"
@@ -96,7 +100,18 @@ const LeagueAddresses = ({ handleSuccessStep }: PreStepsProps) => {
                         />
                     </div>
                     <div className="form-group">
-                        <Field name="playingFacilityLocationText" type="text" className="form-control" placeholder="1800 Mamaroneck Ave, White Plains, NY,USA" />
+                        <Field name="playingFacilityLocationText" type="text" className="form-control hidden" placeholder="1800 Mamaroneck Ave, White Plains, NY,USA" />
+                        <label htmlFor="playingFacilityLocationText">Location of Playing Facility<span></span></label>
+                        <GooglePlacesAutocomplete apiKey={tempAPIKey}
+                            selectProps={{
+                                location1,
+                                onChange: setLocation1,
+                                className: 'location-selector'
+                            }}
+                            autocompletionRequest={{
+
+                            }}
+                        />
                         <ErrorMessage
                             name="playingFacilityLocationText"
                             component="div"
