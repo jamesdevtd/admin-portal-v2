@@ -93,7 +93,7 @@ ul.warnings {
 }
 
 ul.warnings li {
-  @apply block bg-no-repeat bg-contain bg-left font-semibold capitalize;
+  @apply block bg-no-repeat bg-contain bg-left font-semibold uppercase;
   line-height: 1.1em;
   font-size: 11px;
   padding-left: 13px;
