@@ -34,9 +34,9 @@ const LeagueAddresses = ({ handleSuccessStep }: PreStepsProps) => {
     }, []);
 
     const initialValues: AddressesFields = {
-        mailingAddressText: location1.label,
+        mailingAddressText: "lorem ipsum",
         playingFacilityName: "",
-        playingFacilityLocationText: ""
+        playingFacilityLocationText: "lorem ipsum"
     };
 
     const validationSchema = Yup.object().shape({
